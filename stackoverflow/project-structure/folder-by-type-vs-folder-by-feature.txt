@@ -1,0 +1,23 @@
+https://softwareengineering.stackexchange.com/questions/338597/folder-by-type-or-folder-by-feature/338610#338610
+
+Folder-by-type only works on small-scale projects. Folder-by-feature is superior in the majority of cases.
+
+Folder-by-type is ok when you only have a small number of files (under 10 per type, let's say). As soon as you get multiple components in your project, all with multiple files of the same type, it gets very hard to find the actual file you are looking for.
+
+Therefore, folder-by-feature is better due to its scalability. However, if you use folder-by-feature, you end up losing information about the type of component a file represents (because it's no longer in a controller folder, let's say), so this too becomes confusing.
+
+com.example
+├── pet
+|   ├── Controllers
+│   |   ├── PetController1.java
+|   |   └── PetController2.java
+|   └── Services
+│       ├── PetService1.java
+│       └── PetService2.java
+├── user
+|   ├── Controllers
+│   |   ├── UserController1.java
+│   |   └── UserController2.java
+|   └── Services
+│       ├── UserService1.java
+│       └── UserService2.java
